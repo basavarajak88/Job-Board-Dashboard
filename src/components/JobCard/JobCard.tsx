@@ -34,7 +34,6 @@ const JobCard: React.FC<JobCardProps> = memo(({ job, onClick, viewMode = 'grid' 
   const dispatch = useAppDispatch();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   const bookmarkedJobs = useAppSelector(state => state.bookmarks.bookmarkedJobs);
   
   const isBookmarked = bookmarkedJobs.some(bookmarkedJob => bookmarkedJob.slug === job.slug);
